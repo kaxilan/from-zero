@@ -7,8 +7,8 @@ void swap(int& x, int& y);
 int* keyStream(int* s,int* k,int len);
 int* jiaMi_jieMi(int* m, int* k,int* miWen,int len);
 int toHex(char& a);
-/*输入十六进制明文：11223344556677889900AABBCCDDEEFF    
-输入十六进制密钥：13579BDF02468ACE1234567890ABCDEF 
+/*输入十六进制明文：11223344556677889900AABBCCDDEEFF
+输入十六进制密钥：13579BDF02468ACE1234567890ABCDEF
 */
 int main()
 {
@@ -37,12 +37,14 @@ int main()
 	jiaMi_jieMi(t,kstream,miWen,32);
 	for (int i = 0; i < 32; i++)
 		cout<<hex<<miWen[i];
-	cout << endl;
+		cout<<endl;
+
 	int mingwen[32];
 	jiaMi_jieMi(kstream, miWen, mingwen, 32);
 	for (int i = 0; i < 32; i++)
 		cout << hex << mingwen[i];
-	cout << endl;
+		cout<<endl;
+
 	return 0;
 }
 
